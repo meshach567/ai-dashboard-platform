@@ -62,14 +62,14 @@ export default function DashboardPage() {
           <StatsCard
             title="Total Revenue"
             value={`$${currentRevenue.toLocaleString()}`}
-            change={`${revenueChange > 0 ? '+' : ''}${revenueChange}% from last month`}
+            change={`${parseFloat(revenueChange) > 0 ? '+' : ''}${revenueChange}% from last month`}
             changeType={parseFloat(revenueChange) > 0 ? 'increase' : 'decrease'}
             icon={DollarSign}
           />
           <StatsCard
             title="Active Users"
             value={currentUsers.toLocaleString()}
-            change={`${userChange > 0 ? '+' : ''}${userChange}% from last month`}
+            change={`${parseFloat(userChange) > 0 ? '+' : ''}${userChange}% from last month`}
             changeType={parseFloat(userChange) > 0 ? 'increase' : 'decrease'}
             icon={Users}
           />
